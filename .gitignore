@@ -1,0 +1,15 @@
+.bsp
+.idea
+target
+.bsp/**
+.idea/**
+target/**
+.DS_Store
+.DS_Store/**
+test_traversal.txt
+run/**
+project/project
+project/project/**
+project/target
+project/target/**
+
