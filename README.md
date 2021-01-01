@@ -81,7 +81,7 @@ The program will output a list of files that it processes or otherwise will prin
 
 The resulting data set may be queried using a query such as:
 
-http://localhost:8983/solr/gettingstarted/select?df=attr_content&fl=id%2C%20name%2Cattr_category%2Cattr_title%2Cattr_meta_author%2Cattr_created%2Cattr_date&hl.fl=attr_content&hl=on&q=*types*&rows=100
+http://localhost:8983/solr/gettingstarted/select?df=attr_content&fl=id%2Cattr_name%2Cattr_date%2Cattr_title%2Cattr_pdf_docinfo_title%2Cattr_date%2Cattr_created%2Cattr_meta_author%2Cattr_categories&highlightMultiTerm=true&hl.fl=attr_content&hl=on&q=*vector*%20AND%20*norm*
 
 
 Of course make sure to replace the host and core with those from your environment.
