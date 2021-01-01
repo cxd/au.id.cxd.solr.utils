@@ -2,6 +2,8 @@
 
 This is a simple utility that can be used import files into an existing [Apache Solr](https://lucene.apache.org/solr/) core allowing the material to be indexed and searched with apache solr search engine.
 
+This utility makes use of the [java client api for Apache Solr](https://lucene.apache.org/solr/guide/8_7/using-solrj.html#using-solrj).
+
 The core is expected to have been configured for import of content via the tikka extract urls (/update/extract).
 
 This utility is packaged via "universal:packageBin".
