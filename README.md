@@ -4,7 +4,7 @@ This is a simple utility that can be used import files into an existing [Apache 
 
 This utility makes use of the [java client api for Apache Solr](https://lucene.apache.org/solr/guide/8_7/using-solrj.html#using-solrj).
 
-The core is expected to have been configured for import of content via the tikka extract urls (/update/extract).
+The core is expected to have been configured for import of content via the tika extract urls (/update/extract) as per [the instructions here](https://lucene.apache.org/solr/guide/8_7/uploading-data-with-solr-cell-using-apache-tika.html).
 
 This utility is packaged via "universal:packageBin".
 
