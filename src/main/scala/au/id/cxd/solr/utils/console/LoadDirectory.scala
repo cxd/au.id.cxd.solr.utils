@@ -53,7 +53,11 @@ object LoadDirectory {
     results.foreach {
       result =>
         result match {
-          case TaggedFileResult(uniqueId, path, filePath, name, tags) =>
+          case TaggedFileResult(uniqueId, path, filePath, name, tags) => {
+            // remove if exists.
+            if (connection.checkExists(solrConfig.core, uniqueId))
+              connection.delete(solrConfig.core, uniqueId)
+
             val results = connection.extract(solrConfig.core,
               uniqueId,
               name,
@@ -62,6 +66,7 @@ object LoadDirectory {
               solrConfig.contentType
             )
             ()
+          }
           case _ => ()
         }
 

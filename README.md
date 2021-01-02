@@ -1,6 +1,11 @@
 # Solr Utils
 
+This command line utility is a simple tool for importing documents into Apache Solr to assist in curating your own search tools with Apache Solr for your own collection of document assets.
+
 This is a simple utility that can be used import files into an existing [Apache Solr](https://lucene.apache.org/solr/) core allowing the material to be indexed and searched with apache solr search engine.
+
+### Details
+
 
 This utility makes use of the [java client api for Apache Solr](https://lucene.apache.org/solr/guide/8_7/using-solrj.html#using-solrj).
 

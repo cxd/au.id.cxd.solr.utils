@@ -70,11 +70,14 @@ case class Connection(val solrConfig:SolrConfig) {
   def extract(core:String, id:String, name:String, categories:Seq[String], file:File, contentType:String): NamedList[AnyRef] = {
     val client = getClient
     val update = new ContentStreamUpdateRequest(s"/$core/update/extract")
+    val fullUrl = file.toURI.toURL.toExternalForm
     update.addFile(file, contentType)
     update.setParam("id", id)
     update.setParam("literal.id", id)
     update.setParam("name", name)
     update.setParam("literal.name", name)
+    update.setParam("fileUrl", fullUrl)
+    update.setParam("literal.fileUrl", fullUrl)
     update.setParam("categories", categories.mkString(","))
     update.setParam("literal.categories", categories.mkString(","))
     update.setParam("uprefix", "attr_")
